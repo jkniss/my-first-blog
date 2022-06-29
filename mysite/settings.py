@@ -11,37 +11,19 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os
-from django.core.exceptions import ImproperlyConfigured
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
-# Handling key import errors
-def get_env_variable(var_name):
-    try:
-        return os.environ[var_name]
-    except KeyError:
-        error_msg = "Set the %s environment variable" % var_name
-        raise ImproperlyConfigured(error_msg)
-
-ENV_ROLE = get_env_variable('ENV_ROLE')
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = get_env_variable(KEY_SECRET)
+SECRET_KEY = 'django-insecure-i@4swgix9nhjil=16ta!s@wt@)c7%z=1belerl5es74la!g0*k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-TEMPLATE_DEGBUG = DEBUG
-if ENV_ROLE =='development':
-    DEBUG = True
-    TEMPLATE_DEGBUG = DEBUG
+DEBUG = True
 
 # if left blank, the host will validate against the localhost.
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
