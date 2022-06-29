@@ -1,0 +1,2 @@
+SECRET_KEY = 'django-insecure-i@4swgix9nhjil=16ta!s@wt@)c7%z=1belerl5es74la!g0*k'
+DB_PASS =
