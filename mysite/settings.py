@@ -33,7 +33,7 @@ ENV_ROLE = get_env_variable('ENV_ROLE')
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-i@4swgix9nhjil=16ta!s@wt@)c7%z=1belerl5es74la!g0*k'
+SECRET_KEY = get_env_variable(KEY_SECRET)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
