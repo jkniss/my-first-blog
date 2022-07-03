@@ -6,7 +6,14 @@
 </head>
 <body>
   <h1>Welcome to my blog!</h1>
-    <p>This blog website was created using Python, HTML & the Django framework.
-    This blog is a representation of my coding skills.</p>
+    <main>
+    {% for post in posts %}
+        <article>
+            <time>published: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+    </main>
 </body>
 </html>
