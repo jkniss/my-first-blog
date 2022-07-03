@@ -13,7 +13,7 @@ db.sqlite3
 
 # Static folder at project root
 /static/
-keys.txt
+
 
 # macOS
 ._*
@@ -31,3 +31,4 @@ $RECYCLE.BIN/
 .vscode/
 .history/
 *.code-workspace
+/keys.txt
