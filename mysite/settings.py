@@ -128,7 +128,7 @@ STATIC_URL = '/static/'
 
 # this points to where the static (CSS) files are stored.
 STATICFILES_DIRS = [
-    BASE_DIR / "blog/templates/blog/static",
+    BASE_DIR / "blog/static/blog.css",
 
 ]
 STATIC_ROOT = BASE_DIR / 'static'
